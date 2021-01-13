@@ -11,5 +11,6 @@ from sum import mysum
 ])
 def test_mysum(numbers, output):
     assert mysum(numbers) == output
-    assert type(numbers[0]) == int
+    for i in range(len(numbers)):
+        assert type(numbers[i]) == int
     assert (len(numbers) % 2) == 1
